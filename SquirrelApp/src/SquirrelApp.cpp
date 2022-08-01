@@ -5,16 +5,25 @@
 
 #include "Squirrel.h"
 
-class ExampleLayer : public Walnut::Layer
+const char* str;
+
+class AppLayer : public Walnut::Layer
 {
 public:
+	virtual void OnAttach() override {
+		str = Squirrel::File::loadFile("config.save");
+	}
+
+	virtual void OnDetach() override {
+		
+		Squirrel::File::writeFile("config.save", str);
+	}
+
 	virtual void OnUIRender() override
 	{
 		ImGui::Begin("Hello");
 		ImGui::Button("Button");
 		ImGui::End();
-
-		Squirrel::Debug::Log("test");
 
 		ImGui::ShowDemoWindow();
 	}
@@ -23,10 +32,10 @@ public:
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
 	Walnut::ApplicationSpecification spec;
-	spec.Name = "Walnut Example";
+	spec.Name = "Squirrel Example";
 
 	Walnut::Application* app = new Walnut::Application(spec);
-	app->PushLayer<ExampleLayer>();
+	app->PushLayer<AppLayer>();
 	app->SetMenubarCallback([app]()
 		{
 			if (ImGui::BeginMenu("File"))

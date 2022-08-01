@@ -137,10 +137,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\File\File.h" />
     <ClInclude Include="src\Squirrel.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Squirrel.cpp" />
+    <ClCompile Include="src\File\File.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
