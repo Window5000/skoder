@@ -76,7 +76,7 @@ namespace Squirrel {
 		* use 'n' to to seperate lines
 		* writeFile(const char* filedir = system file to write to, const char* str = text to write)
 		*/
-		void writeFile(const char* filedir, const char* str) {
+		void writeFile(const char* filedir, std::string str) {
 			std::fstream config(filedir);
 			if (!config.is_open()) {
 				std::ofstream{ filedir };
