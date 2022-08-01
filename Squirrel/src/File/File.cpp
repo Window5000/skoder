@@ -74,7 +74,7 @@ namespace Squirrel {
 		/*
 		* Write text to a file, create the file if it does not exist
 		* use 'n' to to seperate lines
-		* writeFile(const char* filedir = system file to write to, const char* str = text to write)
+		* writeFile(const char* filedir = system file to write to, std::string str = text to write)
 		*/
 		void writeFile(const char* filedir, std::string str) {
 			std::fstream config(filedir);
