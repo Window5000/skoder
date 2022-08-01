@@ -135,15 +135,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\SquirrelApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\vendor\Walnut\Walnut\Walnut.vcxproj">
       <Project>{C038E8D9-ACDA-12B0-9595-260481D69900}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Squirrel\Squirrel.vcxproj">
       <Project>{3C341828-2801-7333-511A-61DB3D46A8C1}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\SquirrelApp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
