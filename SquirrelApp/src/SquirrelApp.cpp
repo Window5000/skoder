@@ -15,7 +15,6 @@ public:
 	}
 
 	virtual void OnDetach() override {
-		
 		Squirrel::File::writeFile("config.save", str);
 	}
 
