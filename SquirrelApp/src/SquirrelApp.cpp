@@ -5,7 +5,7 @@
 
 #include "Squirrel.h"
 
-const char* str;
+std::string str;
 
 class AppLayer : public Walnut::Layer
 {

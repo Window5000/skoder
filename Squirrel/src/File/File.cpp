@@ -22,7 +22,7 @@ namespace Squirrel {
 		* Load a file and return it as a string
 		* loadFile(const char* filedir = system file to load)
 		*/
-		const char* loadFile(const char* filedir) {
+		std::string loadFile(const char* filedir) {
 			std::fstream file;
 			Squirrel::File::loadFile(filedir, &file);
 
@@ -32,7 +32,7 @@ namespace Squirrel {
 			while (std::getline(file, str)) {
 				fstr += str;
 			}
-			return fstr.c_str();
+			return fstr;
 		}
 
 		/*

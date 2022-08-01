@@ -15,7 +15,7 @@ namespace Squirrel {
 		* Load a file and return it as a string
 		* loadFile(const char* filedir = system file to load)
 		*/
-		const char* loadFile(const char* filedir);
+		std::string loadFile(const char* filedir);
 
 		/*
 		* Remove a file
